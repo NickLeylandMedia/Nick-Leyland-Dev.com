@@ -11,11 +11,11 @@ import React from "react";
 /* Component Interfaces */
 
 /* Component/Functions */
-const Projects = () => {
+const ProjectFeature = () => {
   //Function return statement
   return (
     <div className="Projects w-[95%] lg:w-3/5 mx-auto my-7 text-2xl text-white ">
-      <h2 className="text-2xl my-2">Projects</h2>
+      <h2 className="text-2xl my-2 dark:text-black">Projects</h2>
       <a
         className="bg-white mt-2 mb-6 block w-[200px] p-2 rounded-md text-center text-black text-[16px]"
         href=""
@@ -24,7 +24,7 @@ const Projects = () => {
       </a>
       <div className="projectShowcase w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
         {/* PROJECT */}
-        <div className="project bg-white h-32 my-3 border-solid border-3  border-[#cf3838] flex flex-row justify-between md:justify-evenly xl:justify-center">
+        <div className="project bg-white h-32 my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
           <img
             className="w-[30%] h-auto ml-2 md:ml-0"
             src="foodGroup.svg"
@@ -40,7 +40,7 @@ const Projects = () => {
         {/* END PROJECT */}
         {/* PROJECT */}
         <a href="http://www.nick-leyland.com">
-          <div className="project bg-white h-32 my-3 border-solid border-3  border-[#cf3838] flex flex-row justify-between md:justify-evenly xl:justify-center">
+          <div className="project bg-white h-32 my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
             <img className="w-[30%] h-auto ml-2 md:ml-0" src="ubn.svg" alt="" />
             <div className="projectInfo flex flex-col w-[70%]  my-2 lg:my-3">
               <h4 className="text-black mx-7 md:text-[19px]">
@@ -59,4 +59,4 @@ const Projects = () => {
 };
 
 /* Export Statement */
-export default Projects;
+export default ProjectFeature;

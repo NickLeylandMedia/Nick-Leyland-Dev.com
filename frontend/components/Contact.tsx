@@ -16,18 +16,20 @@ const Contact = () => {
   return (
     <div className="Contact w-[95%] lg:w-[60%] text-white mx-auto mb-7">
       <div className="w-[95%] h-auto">
-        <h2 className="text-2xl lg:my-4">Contact</h2>
+        <h2 className="text-2xl lg:my-4 dark:text-black">Contact</h2>
       </div>
 
       <div className="contactBox flex flex-col lg:flex-row mx-auto mt-[-45px] lg:mt-0">
         <div className="contactText mt-[52px] pr-6">
-          <h3 className="hidden lg:block lg:mt-[190px]">Wanna chat?</h3>
-          <p className="text-lg mb-4">
+          <h3 className="hidden lg:block lg:text-4xl lg:mt-[190px] dark:text-black">
+            Wanna chat?
+          </h3>
+          <p className="text-xl lg:text-3xl mb-4 dark:text-black">
             Feel free to shoot me a message! I'm always looking for new and
             interesting projects!
           </p>
         </div>
-        <div className="contactForm bg-white text-black rounded-lg w-[90%] m-auto">
+        <div className="contactForm bg-white text-black rounded-lg w-[90%] m-auto  dark:border-0 dark:shadow-blue">
           <form action="" className="h-full my-6">
             <div className="formLeft w-full h-full flex flex-col justify-center">
               <div className="formInput w-4/5 mx-auto flex flex-col">
@@ -71,7 +73,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="formInput w-2/5 h-10 m-auto">
-                <button className="bg-red-500 w-full h-full text-center text-white">
+                <button className="bg-red-500 dark:bg-blue-600 w-full h-full text-center text-white">
                   SEND
                 </button>
               </div>

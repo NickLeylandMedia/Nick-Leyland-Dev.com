@@ -15,8 +15,8 @@ const Tech = () => {
   //Function return statement
   return (
     <div className="Tech w-[95%] lg:w-3/5 mx-auto my-5">
-      <h1 className="text-white text-2xl">My Tools</h1>
-      <p className="text-white text-xl border my-2">
+      <h1 className="text-white text-2xl dark:text-black">My Tools</h1>
+      <p className="text-white text-xl border my-4 dark:text-black">
         Over the years I've gained experience with many different web
         technologies. These are the tools I use most frequently!
       </p>
@@ -29,7 +29,7 @@ const Tech = () => {
       <div className="toolShowcase w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
         {/* TOOL */}
         <a href="http://www.nextjs.org">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838]">
+          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
             <div className="toolInfo w-full h-full relative top-[35%]">
               <img
                 className="w-auto h-[50px] m-auto max-w-[50%]"
@@ -43,7 +43,7 @@ const Tech = () => {
         {/* END TOOL */}
         {/* TOOL */}
         <a href="http://www.tailwindcss.com">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838]">
+          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
             <div className="toolInfo w-full h-full relative top-[35%]">
               <img
                 className="w-auto h-[50px] m-auto max-w-[50%]"
@@ -57,7 +57,7 @@ const Tech = () => {
         {/* END TOOL */}
         {/* TOOL */}
         <a href="http://www.sanity.io">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838]">
+          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
             <div className="toolInfo w-full h-full relative top-[35%]">
               <img
                 className="w-auto h-[50px] m-auto max-w-[50%]"
@@ -71,7 +71,7 @@ const Tech = () => {
         {/* END TOOL */}
         {/* TOOL */}
         <a href="https://cloud.google.com/">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838]">
+          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
             <div className="toolInfo w-full h-full relative top-[35%]">
               <img
                 className="w-auto h-[50px] m-auto max-w-[50%]"
