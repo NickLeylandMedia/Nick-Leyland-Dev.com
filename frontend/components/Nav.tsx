@@ -55,15 +55,15 @@ const Nav = () => {
     <nav className="w-[95%] m-auto lg:w-[60%] h-[70px] flex flex-row justify-between">
       <img
         className="navLogo w-[50px] h-[50px] my-auto lg:ml-0 dark:hidden"
-        src="unboxed.svg"
+        src="/unboxed.svg"
         alt=""
       />
       <img
         className="navLogo w-[50px] h-[50px] my-auto lg:ml-0 hidden dark:block"
-        src="ubn.svg"
+        src="/ubn.svg"
         alt=""
       />
-      <BiMenu className="h-[50px] w-[50px] text-white my-auto lg:hidden mr-[-8px]" />
+      <BiMenu className="h-[50px] w-[50px] text-white my-auto lg:hidden mr-[-8px] dark:text-black" />
       <div className="navLinks h-full w-[65%] flex-row justify-between leading-[60px] text-[20px] text-white hidden lg:flex">
         {renderedNavLinks}
         <BsFillSunFill

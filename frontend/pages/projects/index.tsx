@@ -8,9 +8,9 @@ import React from "react";
 /* Image Imports */
 
 /* Component Imports */
-import Nav from "../components/Nav";
-import AllProjects from "../components/pages/projects/AllProjects";
-import Footer from "../components/Footer";
+import Nav from "../../components/Nav";
+import AllProjects from "../../components/pages/projects/AllProjects";
+import Footer from "../../components/Footer";
 
 /* Component Interfaces */
 

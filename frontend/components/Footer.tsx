@@ -37,21 +37,21 @@ const Footer = () => {
             <div className="badge my-[1px] flex flex-col bg-white text-center border border-black border-solid rounded-lg">
               <img
                 className="w-[150px] h-[44px] m-auto p-2 md:w-[250px] md:h-[73px]"
-                src="tailword.svg"
+                src="/tailword.svg"
                 alt=""
               />
             </div>
             <div className="badge my-[1px] flex flex-col bg-white text-center border border-black border-solid rounded-lg">
               <img
                 className="w-[150px] h-[44px] m-auto p-2"
-                src="next.svg"
+                src="/next.svg"
                 alt=""
               />
             </div>
             <div className="badge my-[1px] flex flex-col bg-white text-center border border-black border-solid rounded-lg">
               <img
                 className="w-[150px] h-[44px] m-auto p-2"
-                src="sanity.svg"
+                src="/sanity.svg"
                 alt=""
               />
             </div>
