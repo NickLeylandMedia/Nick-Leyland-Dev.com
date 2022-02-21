@@ -18,15 +18,15 @@ const Bio = () => {
   return (
     <div className="Bio w-[95%] m-auto lg:w-[60%] text-center">
       {/* <h2 className="text-2xl lg:my-4 dark:text-black text-white">About</h2> */}
-      <h1 className="text-white text-4xl my-3">Hi! I'm Nick!</h1>
+      <h1 className="text-white text-4xl my-3">Hi! I&apos;m Nick!</h1>
       <img
         src="/me.jpg"
         alt=""
         className="w-[50%] rounded-full mx-auto my-3 border-solid border-3 border-[#cf3838] dark:border-0 dark:shadow-blue"
       />
       <p className="my-3 text-white text-xl">
-        I'm a creator that is passionate about the digital arts and building
-        useful web apps!
+        I&apos;m a creator that is passionate about the digital arts and
+        building useful web apps!
       </p>
       <div className="bioHeader">
         <div className="bioText text-white dark:text-black text-2xl text-left">
@@ -44,21 +44,21 @@ const Bio = () => {
           </p>
           <p className="my-4">
             I fell in love with building websites - especially with the
-            JAMstack. There's something about building a snazzy website that
-            looks exactly how I want and performs exactly as I need it to that
-            really is satisfying to me.
+            JAMstack. There&apos;s something about building a snazzy website
+            that looks exactly how I want and performs exactly as I need it to
+            that really is satisfying to me.
           </p>
           <p className="my-4">
             When I was hired on I only knew HTML and CSS, and since then, I have
             expanded my toolset greatly. React is my framework of choice, and
-            lately I'm loving Next.js!
+            lately I&apos;m loving Next.js!
           </p>
           <h2>Right Now</h2>
           <p className="my-4">
             The last few months have been spent buttoning up my portfolio, as
             well as learning a handful of new web technologies. However, web
-            development is not my only passion. I'm founded Nick Leyland Media
-            in 2019 as a vehicle to promote my photography and videography
+            development is not my only passion. I&apos;m founded Nick Leyland
+            Media in 2019 as a vehicle to promote my photography and videography
             endeavors. Since founding the company, I have produced a full length
             film (with another on the way!), and amassed over 100 subscribers on
             YouTube.
@@ -67,8 +67,8 @@ const Bio = () => {
             Between learning programming, producing full-length films, and
             hunting for a job in the webdev space, life can certainly seem like
             a whirlwind at times. I take pride in every project I take on, and
-            I'd love to add value to yours. If you want to work together,{" "}
-            <Link href="/contact">
+            I&apos;d love to add value to yours. If you want to work together,{" "}
+            <Link href="/contact" passHref>
               <span className="text-red-600 cursor-pointer">
                 drop me a line!
               </span>

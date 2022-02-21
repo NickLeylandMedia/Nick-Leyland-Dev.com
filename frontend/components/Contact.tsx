@@ -25,7 +25,7 @@ const Contact = () => {
             Wanna chat?
           </h3>
           <p className="text-xl lg:text-3xl mb-4 dark:text-black">
-            Feel free to shoot me a message! I'm always looking for new and
+            Feel free to shoot me a message! I&apos;m always looking for new and
             interesting projects!
           </p>
         </div>

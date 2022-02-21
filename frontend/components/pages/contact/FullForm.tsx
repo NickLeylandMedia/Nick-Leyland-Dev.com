@@ -15,10 +15,11 @@ const FullForm = () => {
   //Function return statement
   return (
     <div className="FullForm w-[95%] lg:w-[60%] text-white mx-auto mb-7">
-      <h1 className="text-xl">Let's Talk!</h1>
+      <h1 className="text-xl">Let&apos;s Talk!</h1>
       <p className="text-xl">
         Have a question about my work? Want to hire me? Or do you just wanna
-        chat? Whatever it is, drop me a line and I'll respond as soon as I can!
+        chat? Whatever it is, drop me a line and I&apos;ll respond as soon as I
+        can!
       </p>
       <div className="contactForm bg-white text-black rounded-lg w-full md:w-[50%] m-auto  dark:border-0 dark:shadow-blue">
         <form

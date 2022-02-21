@@ -29,11 +29,8 @@ const ProjectFeature: React.FC<Props> = ({ projects }) => {
     renderedProjects = activeProjects.map(
       ({ name, url, description, image, slug }) => {
         return (
-          <Link href={`/projects/${slug.current}`}>
-            <div
-              key={`proj${name}${url}`}
-              className="cursor-pointer project bg-white h-[175px] md:h-[128px] my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center"
-            >
+          <Link key={`proj${name}${url}`} href={`/projects/${slug.current}`}>
+            <div className="cursor-pointer project bg-white h-[175px] md:h-[128px] my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
               <img
                 className="w-[30%] h-auto ml-2 md:ml-0"
                 src={urlFor(image).url()}
@@ -57,7 +54,7 @@ const ProjectFeature: React.FC<Props> = ({ projects }) => {
   return (
     <div className="Projects w-[95%] lg:w-3/5 mx-auto my-7 text-2xl text-white ">
       <h2 className="text-2xl my-2 dark:text-black">Projects</h2>
-      <Link href="/projects">
+      <Link href="/projects" passHref>
         <a className="bg-white mt-2 mb-6 block w-[200px] p-2 rounded-md text-center text-black text-[16px]">
           See All Projects
         </a>

@@ -52,7 +52,7 @@ const Tech: React.FC<Props> = ({ tools }) => {
     <div className="Tech w-[95%] lg:w-3/5 mx-auto my-5">
       <h1 className="text-white text-2xl dark:text-black">My Tools</h1>
       <p className="text-white text-xl border my-4 dark:text-black">
-        Over the years I've gained experience with many different web
+        Over the years I&apos;ve gained experience with many different web
         technologies. These are the tools I use most frequently!
       </p>
       <div className="toolShowcase w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
