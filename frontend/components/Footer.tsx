@@ -17,7 +17,11 @@ import { footerLinks } from "../modules/componentData";
 const Footer = () => {
   let renderedLinks = footerLinks.map(({ Name, URL }) => {
     return (
-      <a key={`${Name}${URL}`} href={URL} className="m-auto dark:text-black">
+      <a
+        key={`${Name}${URL}`}
+        href={URL}
+        className="m-auto dark:text-black hover:text-red-600 transition ease-in-out duration-500"
+      >
         {Name}
       </a>
     );
@@ -28,7 +32,7 @@ const Footer = () => {
     <div className="Footer w-[95%] m-auto lg:w-[60%]">
       <hr className="bg-white dark:bg-black h-1 w-full my-2 mx-auto block" />
       <div className="footBox flex flex-col h-full md:flex-row">
-        <div className="linksBox w-full  grid grid-rows-3 gap-7 grid-cols-3 text-white h-[70%] mx-auto my-3 font text-center">
+        <div className="linksBox w-full  grid grid-rows-2 gap-7 grid-cols-3 text-white h-[70%] mx-auto my-3 font text-center">
           {renderedLinks}
         </div>
         <div className="badgeBox m-2">

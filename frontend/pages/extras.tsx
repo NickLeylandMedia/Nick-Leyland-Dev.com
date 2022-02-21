@@ -12,6 +12,7 @@ import type { NextPage } from "next";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import ExtrasDir from "../components/pages/extras/ExtrasDir";
+import Sidebar from "../components/Sidebar";
 
 /* Component Interfaces */
 
@@ -22,6 +23,7 @@ const Extras: NextPage = () => {
     <React.Fragment>
       <Nav />
       <ExtrasDir />
+      <Sidebar />
       <Footer />
     </React.Fragment>
   );

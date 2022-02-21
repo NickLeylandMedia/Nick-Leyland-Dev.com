@@ -2,6 +2,11 @@
 //React
 import React from "react";
 
+import Link from "next/link";
+
+/* Module Imports */
+import { urlFor } from "../modules/urlFor";
+
 /* Stylesheet Imports */
 
 /* Image Imports */
@@ -9,50 +14,56 @@ import React from "react";
 /* Component Imports */
 
 /* Component Interfaces */
+interface Props {
+  projects: any[];
+}
 
 /* Component/Functions */
-const ProjectFeature = () => {
+const ProjectFeature: React.FC<Props> = ({ projects }) => {
+  let activeProjects;
+  let renderedProjects;
+  if (projects.length) {
+    activeProjects = projects.filter((proj) => {
+      return proj.featured;
+    });
+    renderedProjects = activeProjects.map(
+      ({ name, url, description, image, slug }) => {
+        return (
+          <Link href={`/projects/${slug.current}`}>
+            <div
+              key={`proj${name}${url}`}
+              className="cursor-pointer project bg-white h-[175px] md:h-[128px] my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center"
+            >
+              <img
+                className="w-[30%] h-auto ml-2 md:ml-0"
+                src={urlFor(image).url()}
+                alt=""
+              />
+              <div className="projectInfo w-[70%] flex flex-col my-2 lg:my-3">
+                <h4 className="text-black mx-7 md:text-[19px]">{name}</h4>
+                <p className="text-black text-[16px] md:text-[14px] lg:text-[20px] mx-7">
+                  {description}
+                </p>
+              </div>
+            </div>
+          </Link>
+        );
+      }
+    );
+  } else {
+    renderedProjects = "No Projects";
+  }
   //Function return statement
   return (
     <div className="Projects w-[95%] lg:w-3/5 mx-auto my-7 text-2xl text-white ">
       <h2 className="text-2xl my-2 dark:text-black">Projects</h2>
-      <a
-        className="bg-white mt-2 mb-6 block w-[200px] p-2 rounded-md text-center text-black text-[16px]"
-        href=""
-      >
-        See All Projects
-      </a>
-      <div className="projectShowcase w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
-        {/* PROJECT */}
-        <div className="project bg-white h-32 my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
-          <img
-            className="w-[30%] h-auto ml-2 md:ml-0"
-            src="foodGroup.svg"
-            alt=""
-          />
-          <div className="projectInfo w-[70%] flex flex-col my-2 lg:my-3">
-            <h4 className="text-black mx-7 md:text-[19px]">Food Review Base</h4>
-            <p className="text-black text-[16px] md:text-[14px] lg:text-[20px] mx-7">
-              Restaurant and meal review database.
-            </p>
-          </div>
-        </div>
-        {/* END PROJECT */}
-        {/* PROJECT */}
-        <a href="http://www.nick-leyland.com">
-          <div className="project bg-white h-32 my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
-            <img className="w-[30%] h-auto ml-2 md:ml-0" src="ubn.svg" alt="" />
-            <div className="projectInfo flex flex-col w-[70%]  my-2 lg:my-3">
-              <h4 className="text-black mx-7 md:text-[19px]">
-                Nick Leyland Media
-              </h4>
-              <p className="text-black text-[16px] md:text-[14px] lg:text-[20px] mx-7">
-                My photo/videography website!
-              </p>
-            </div>
-          </div>
+      <Link href="/projects">
+        <a className="bg-white mt-2 mb-6 block w-[200px] p-2 rounded-md text-center text-black text-[16px]">
+          See All Projects
         </a>
-        {/* END PROJECT */}
+      </Link>
+      <div className="projectShowcase w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+        {renderedProjects}
       </div>
     </div>
   );

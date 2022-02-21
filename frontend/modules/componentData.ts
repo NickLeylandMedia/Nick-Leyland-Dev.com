@@ -1,13 +1,13 @@
 const footerLinks = [
+  { Name: "Home", URL: "/" },
   { Name: "About", URL: "/about" },
   { Name: "Contact", URL: "/contact" },
-  { Name: "Blog", URL: "/blog" },
+  // { Name: "Blog", URL: "/blog" },
   { Name: "Projects", URL: "/projects" },
   { Name: "Github", URL: "https://github.com/NickLeylandMedia" },
   { Name: "LinkedIn", URL: "https://www.linkedin.com/in/nick-leyland/" },
-  { Name: "Resources", URL: "/resources" },
-  { Name: "Info", URL: "/info" },
-  { Name: "Home", URL: "/" },
+  // { Name: "Resources", URL: "/resources" },
+  // { Name: "Info", URL: "/info" },
 ];
 
 const navLinks = [

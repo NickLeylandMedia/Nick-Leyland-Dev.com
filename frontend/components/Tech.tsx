@@ -2,6 +2,8 @@
 //React
 import React from "react";
 
+import { urlFor } from "../modules/urlFor";
+
 /* Stylesheet Imports */
 
 /* Image Imports */
@@ -9,9 +11,42 @@ import React from "react";
 /* Component Imports */
 
 /* Component Interfaces */
+interface Props {
+  tools: any[];
+}
 
 /* Component/Functions */
-const Tech = () => {
+const Tech: React.FC<Props> = ({ tools }) => {
+  let featured: any[];
+  let renderedTech;
+  if (tools.length) {
+    featured = tools.filter((tool) => {
+      return tool.featured === true;
+    });
+
+    if (featured.length) {
+      renderedTech = featured.map(({ name, url, image }) => {
+        return (
+          <div
+            key={`tech${name}${url}`}
+            className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue"
+          >
+            <a href={url}>
+              <div className="toolInfo w-full h-full relative top-[35%]">
+                <img
+                  className="w-auto h-[50px] m-auto max-w-[50%]"
+                  src={urlFor(image).url()}
+                  alt=""
+                />
+                <h4 className="mt-2">{name}</h4>
+              </div>
+            </a>
+          </div>
+        );
+      });
+    }
+  }
+
   //Function return statement
   return (
     <div className="Tech w-[95%] lg:w-3/5 mx-auto my-5">
@@ -20,69 +55,8 @@ const Tech = () => {
         Over the years I've gained experience with many different web
         technologies. These are the tools I use most frequently!
       </p>
-      <a
-        className="bg-white mt-2 mb-6 block w-[200px] p-2 rounded-md text-center"
-        href=""
-      >
-        See All Tech/Projects
-      </a>
       <div className="toolShowcase w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
-        {/* TOOL */}
-        <a href="http://www.nextjs.org">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
-            <div className="toolInfo w-full h-full relative top-[35%]">
-              <img
-                className="w-auto h-[50px] m-auto max-w-[50%]"
-                src="next.svg"
-                alt=""
-              />
-              <h4 className="mt-2">Next.js</h4>
-            </div>
-          </div>
-        </a>
-        {/* END TOOL */}
-        {/* TOOL */}
-        <a href="http://www.tailwindcss.com">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
-            <div className="toolInfo w-full h-full relative top-[35%]">
-              <img
-                className="w-auto h-[50px] m-auto max-w-[50%]"
-                src="tailwindcss.svg"
-                alt=""
-              />
-              <h4 className="mt-2">Tailwind CSS</h4>
-            </div>
-          </div>
-        </a>
-        {/* END TOOL */}
-        {/* TOOL */}
-        <a href="http://www.sanity.io">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
-            <div className="toolInfo w-full h-full relative top-[35%]">
-              <img
-                className="w-auto h-[50px] m-auto max-w-[50%]"
-                src="sanity.svg"
-                alt=""
-              />
-              <h4 className="mt-2">Sanity.io</h4>
-            </div>
-          </div>
-        </a>
-        {/* END TOOL */}
-        {/* TOOL */}
-        <a href="https://cloud.google.com/">
-          <div className="techtool bg-white text-center w-full lg:w-[75%] m-auto h-44 lg:h-48 xl:h-48 relative border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue">
-            <div className="toolInfo w-full h-full relative top-[35%]">
-              <img
-                className="w-auto h-[50px] m-auto max-w-[50%]"
-                src="gcloud.svg"
-                alt=""
-              />
-              <h4 className="mt-2">Google Cloud</h4>
-            </div>
-          </div>
-        </a>
-        {/* END TOOL */}
+        {renderedTech}
       </div>
     </div>
   );

@@ -30,42 +30,52 @@ const Contact = () => {
           </p>
         </div>
         <div className="contactForm bg-white text-black rounded-lg w-[90%] m-auto  dark:border-0 dark:shadow-blue">
-          <form action="" className="h-full my-6">
+          <form
+            action="https://cform.rac-0.fr/f/f3e318b220fa9fa6709b90f2862f8050"
+            method="POST"
+            className="h-full my-6"
+          >
             <div className="formLeft w-full h-full flex flex-col justify-center">
               <div className="formInput w-4/5 mx-auto flex flex-col">
-                <label htmlFor="" className="w-full my-2">
+                <label htmlFor="name" className="w-full my-2">
                   Name:
                 </label>
                 <input
+                  id="name"
+                  name="name"
                   type="text"
                   className="border border-black border-solid w-[90%] m-auto"
                 />
               </div>
               <div className="formInput w-4/5 mx-auto flex flex-col">
-                <label htmlFor="" className="my-2">
+                <label htmlFor="email" className="my-2">
                   Email:
                 </label>
                 <input
+                  id="email"
+                  name="email"
                   type="text"
                   className="border border-black border-solid w-[90%] m-auto"
                 />
               </div>
               <div className="formInput w-4/5 mx-auto flex flex-col">
-                <label htmlFor="" className="my-2">
+                <label htmlFor="subject" className="my-2">
                   Subject:
                 </label>
                 <input
+                  id="subject"
+                  name="subject"
                   type="text"
                   className="border border-black border-solid w-[90%] m-auto"
                 />
               </div>
               <div className="formInput w-4/5 mx-auto my-5 flex flex-col">
-                <label htmlFor="" className="my-2">
+                <label htmlFor="message" className="my-2">
                   Message:
                 </label>
                 <textarea
-                  name=""
-                  id=""
+                  name="message"
+                  id="message"
                   cols={20}
                   rows={50}
                   className="border border-black border-solid m-auto h-[200px] overflow-y-auto w-[90%] break-all"

@@ -2,6 +2,14 @@
 //React
 import React, { useEffect } from "react";
 
+//Redux
+import { useAppDispatch, useAppSelector } from "../modules/redux/hooks";
+import {
+  setVis,
+  setInvis,
+  selectDispState,
+} from "../modules/redux/slices/dispModeSlice";
+
 //React-Icons
 import { BiMenu } from "react-icons/bi";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
@@ -25,15 +33,17 @@ import { navLinks } from "../modules/componentData";
 
 /* Component/Functions */
 const Nav = () => {
-  // useEffect(() => {
-  //   const check = document.documentElement.classList.contains("light");
-  //   const targ = document.querySelector(".navLogo") as HTMLImageElement;
-  //   if (check) {
-  //     targ.src = "unboxed.svg";
-  //   } else {
-  //     targ.src = "ubn.svg";
-  //   }
-  // }, []);
+  const dispatch = useAppDispatch();
+  const bool = useAppSelector(selectDispState);
+  const visFunc = (): void => {
+    if (bool) {
+      dispatch(setInvis());
+      console.log(bool);
+    } else {
+      dispatch(setVis());
+      console.log(bool);
+    }
+  };
 
   const renderedNavLinks = navLinks.map(({ Name, URL, Active }) => {
     if (Active) {
@@ -63,7 +73,11 @@ const Nav = () => {
         src="/ubn.svg"
         alt=""
       />
-      <BiMenu className="h-[50px] w-[50px] text-white my-auto lg:hidden mr-[-8px] dark:text-black" />
+      <BiMenu
+        className="h-[50px] w-[50px] text-white my-auto lg:hidden mr-[-8px] dark:text-black"
+        onClick={visFunc}
+      />
+
       <div className="navLinks h-full w-[65%] flex-row justify-between leading-[60px] text-[20px] text-white hidden lg:flex">
         {renderedNavLinks}
         <BsFillSunFill
