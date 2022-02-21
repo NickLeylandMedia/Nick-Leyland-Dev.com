@@ -29,7 +29,11 @@ const ProjectFeature: React.FC<Props> = ({ projects }) => {
     renderedProjects = activeProjects.map(
       ({ name, url, description, image, slug }) => {
         return (
-          <Link key={`proj${name}${url}`} href={`/projects/${slug.current}`}>
+          <Link
+            key={`proj${name}${url}`}
+            href={`/projects/${slug.current}`}
+            passHref
+          >
             <div className="cursor-pointer project bg-white h-[175px] md:h-[128px] my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
               <img
                 className="w-[30%] h-auto ml-2 md:ml-0"

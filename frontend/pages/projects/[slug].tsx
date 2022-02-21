@@ -71,6 +71,7 @@ export async function getStaticProps(context: any) {
     props: {
       project,
     },
+    revalidate: 10,
   };
 }
 
