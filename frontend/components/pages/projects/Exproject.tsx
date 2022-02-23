@@ -39,11 +39,11 @@ const Exproject: React.FC<Props> = ({ project }) => {
 
   const ptComponents = {
     block: {
-      h1: ({ Children }: any) => {
-        return <h1 className="whiteText">{Children}</h1>;
+      h1: ({ children }: any) => {
+        return <h1 className="text-white dark:text-black">{children}</h1>;
       },
-      p: ({ Children }: any) => {
-        return <p className="whiteText">{Children}</p>;
+      normal: ({ children }: any) => {
+        return <p className="text-white dark:text-black">{children}</p>;
       },
     },
   };
@@ -110,9 +110,8 @@ const Exproject: React.FC<Props> = ({ project }) => {
           <div className="stackRow grid grid-cols-5 w-full mx-auto my-2 lg:my-5 gap-3 relative mb-4">
             {renderedStack}
           </div>
-          <div className="text-white my-3 dark:text-black text-lg">
-            <PortableText value={project.fulldesc} components={ptComponents} />
-          </div>
+
+          <PortableText value={project.fulldesc} components={ptComponents} />
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ const Contact = () => {
             interesting projects!
           </p>
         </div>
-        <div className="contactForm bg-white text-black rounded-lg w-[90%] m-auto  dark:border-0 dark:shadow-blue">
+        <div className="contactForm bg-white text-black rounded-lg w-[90%] m-auto  dark:border-0 dark:shadow-blue border-solid border-3  border-[#cf3838]">
           <form
             action="https://cform.rac-0.fr/f/f3e318b220fa9fa6709b90f2862f8050"
             method="POST"

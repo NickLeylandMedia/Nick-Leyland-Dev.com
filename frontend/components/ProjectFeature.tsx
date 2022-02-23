@@ -34,7 +34,7 @@ const ProjectFeature: React.FC<Props> = ({ projects }) => {
             href={`/projects/${slug.current}`}
             passHref
           >
-            <div className="cursor-pointer project bg-white h-[175px] md:h-[128px] my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
+            <div className="cursor-pointer project bg-white h-[175px] my-3 border-solid border-3  border-[#cf3838] dark:border-0 dark:shadow-blue flex flex-row justify-between md:justify-evenly xl:justify-center">
               <img
                 className="w-[30%] h-auto ml-2 md:ml-0"
                 src={urlFor(image).url()}
@@ -42,7 +42,7 @@ const ProjectFeature: React.FC<Props> = ({ projects }) => {
               />
               <div className="projectInfo w-[70%] flex flex-col my-2 lg:my-3">
                 <h4 className="text-black mx-7 md:text-[19px]">{name}</h4>
-                <p className="text-black text-[16px] md:text-[14px] lg:text-[20px] mx-7">
+                <p className="text-black text-[16px] md:text-[14px] lg:text-[20px] mx-7 mb-3">
                   {description}
                 </p>
               </div>
