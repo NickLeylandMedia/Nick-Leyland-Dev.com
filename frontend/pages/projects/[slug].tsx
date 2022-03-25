@@ -46,6 +46,8 @@ const ProjDetail = ({ project }: projDetailProps) => {
   );
 };
 
+/* Server Side Rendering Logic */
+//Query Variable
 const query = groq`*[_type == "project" && slug.current == $slug][0]{
   name, url, slug, github, description, image, publishDate, lastUpdated, fulldesc, tools[]->{name, image}
 }`;
