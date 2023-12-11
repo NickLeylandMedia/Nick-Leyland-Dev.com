@@ -1,0 +1,53 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+
+.DevResources {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.resourceContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.resourceTagline {
+  margin-bottom: 15px;
+}
+
+.resource {
+  display: grid;
+  padding: 10px;
+  grid-template-rows: 1fr auto auto;
+  background-color: white;
+  border-radius: 15px;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  text-align: center;
+
+  p,
+  h2 {
+    color: black;
+  }
+
+  img {
+    width: 40%;
+    height: auto;
+    max-height: 90px;
+    margin: 20px auto;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+      background-color: $orange;
+    }
+  }
+}
+
+@include lg {
+  .resourceContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

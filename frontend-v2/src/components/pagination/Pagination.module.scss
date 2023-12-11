@@ -1,0 +1,17 @@
+@import "../../styles/modules/buttons";
+
+.Pagination {
+  width: 95%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.activePage {
+  @include paginationButton(white, white, black, black, white);
+}
+
+.inactivePage {
+  @include paginationButton(transparent, white, white, black, white);
+}

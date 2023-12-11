@@ -1,0 +1,151 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/modules/links";
+@import "../../../styles/variables.scss";
+
+.PostDetail {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.contentContainer {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.postImageBacking {
+  margin: 20px auto;
+  background-color: white;
+  padding: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postInfo {
+  margin: 20px auto;
+
+  p {
+    text-align: center;
+  }
+}
+
+.postImage {
+  display: block;
+  width: 90%;
+  object-fit: contain;
+  max-height: 350px;
+
+  border-radius: 10px;
+}
+
+.catContainer {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: left;
+
+  p {
+    color: white;
+    max-width: 25%;
+  }
+}
+
+.tagContainer {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  p {
+    color: white;
+    max-width: 25%;
+  }
+}
+
+.flexContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto;
+}
+
+.postEnd {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.postEndActions {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.postActionLink {
+  @include roundedLink($orange, white);
+  width: 100%;
+}
+
+.textContainer {
+  margin: 20px auto;
+  color: white;
+
+  img {
+    width: 95%;
+    margin: 20px auto;
+    display: block;
+    object-fit: cover;
+    height: 350px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-primary;
+    margin: 15px 0;
+  }
+}
+
+.postCategory {
+  @include pillTag($darkBlue, white);
+}
+
+.postTag {
+  @include pillTag($orange, white);
+}
+
+@include md {
+  .PostDetail {
+    width: 90%;
+  }
+}
+
+@include lg {
+  .contentContainer {
+    width: 60%;
+  }
+}
+
+@include xl {
+  .contentContainer {
+    width: 50%;
+  }
+}

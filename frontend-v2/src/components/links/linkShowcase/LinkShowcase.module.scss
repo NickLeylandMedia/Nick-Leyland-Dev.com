@@ -1,0 +1,96 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+
+.LinkShowcase {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 900px;
+
+  h1 {
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+
+.LinkShowcaseHeader {
+  width: 100%;
+}
+
+.linkCategory {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.linkCatHeader {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.linkContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.showcaseLink {
+  width: 100%;
+  min-height: 75px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  transition: all 500ms ease-in-out;
+  h2 {
+    color: black;
+  }
+}
+
+.showcaseIcon {
+  height: 75px;
+  width: 75px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.showcaseText {
+  width: 40%;
+}
+
+@media (hover: hover) {
+  .showcaseLink:hover {
+    background-color: $orange;
+  }
+}
+
+@include md {
+  .LinkShowcase {
+    width: 90%;
+  }
+}
+
+@include lg {
+  .linkCategory {
+    width: 60%;
+  }
+}
+
+@include xl {
+  .linkCategory {
+    width: 50%;
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.HomeHeroV2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wideContentBox {
+  display: none;
+  width: 710px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 190px;
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .linkLine {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.contentBox {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 150px;
+
+  h1 {
+    font-size: 65px;
+  }
+}
+
+.gridMenu {
+  width: 100%;
+  display: grid;
+  margin: 10px 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+@media (hover: hover) {
+  .heroTileLink:hover {
+    background-color: $orange;
+    color: white;
+  }
+}
+
+@include lg {
+  .contentBox {
+    display: none;
+  }
+
+  .wideContentBox {
+    display: block;
+
+    .linkLine {
+      a {
+        padding: 8px 15px;
+      }
+    }
+  }
+}
+
+@include xl {
+  .wideContentBox {
+    h1 {
+      font-size: 120px;
+    }
+
+    .linkLine {
+      a {
+        font-size: 30px;
+        padding: 8px 22px;
+      }
+    }
+
+    width: 900px;
+  }
+}

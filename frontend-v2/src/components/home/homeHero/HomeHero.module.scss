@@ -1,0 +1,109 @@
+@import "../../../styles/responsive.scss";
+
+.HomeHero {
+  display: flex;
+  flex-direction: column;
+}
+
+.centralContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: white;
+  font-size: 65px;
+  font-weight: 200;
+}
+
+.homeHR {
+  display: none;
+}
+
+.homeTitlePrimary {
+  width: 100%;
+  font-size: 75px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.homeLinkMenu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  min-height: 50px;
+}
+
+@media (hover: hover) {
+  .homeLink:hover {
+    color: rgb(255, 115, 0);
+    transition: all 500ms ease-in-out;
+  }
+}
+
+@include md {
+  .homeTitlePrimary {
+    font-size: 90px;
+  }
+
+  .homeLink {
+    font-size: 65px;
+  }
+}
+
+@include lg {
+  .homeLinkMenu {
+    width: 85%;
+    flex-direction: row;
+  }
+
+  .homeHR {
+    display: block;
+  }
+
+  .homeLink {
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  .homeTitlePrimary {
+    font-size: 100px;
+    text-align: center;
+  }
+
+  .HomeHero {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .centralContent {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+
+@include xl {
+  .homeTitlePrimary {
+    font-size: 140px;
+  }
+
+  .homeLinkMenu {
+    width: 80%;
+  }
+
+  .homeLink {
+    font-size: 35px;
+  }
+
+  .centralContent {
+    width: 75%;
+  }
+}

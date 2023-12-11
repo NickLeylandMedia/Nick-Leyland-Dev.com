@@ -1,0 +1,57 @@
+@import "../../../styles/modules/links";
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.PostCard {
+  min-height: 350px;
+
+  h2 {
+    font-size: 25px;
+    color: black;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+  }
+}
+
+.postImage {
+  width: 90%;
+  margin: 10px auto;
+  height: 200px;
+  object-fit: contain;
+}
+
+.postCardLink {
+  display: inline-block;
+  width: 30%;
+  margin: 10px 0;
+  @include roundedLink($orange, white);
+}
+
+.catTagContainer {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: left;
+
+  p {
+    color: white;
+  }
+}
+
+.catPill {
+  @include pillTag($darkBlue, white);
+}
+
+.tagPill {
+  @include pillTag($orange, white);
+}

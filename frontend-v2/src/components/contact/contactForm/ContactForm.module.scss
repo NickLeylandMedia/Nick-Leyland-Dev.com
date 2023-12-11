@@ -1,0 +1,123 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+@import "../../../styles/modules/buttons";
+
+.ContactForm {
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.contactTitleBox {
+  h1 {
+    margin-bottom: 15px;
+  }
+  width: 100%;
+  text-align: center;
+}
+
+.contactServiceBox {
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contactService {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  text-align: center;
+
+  br {
+    display: none;
+  }
+
+  h3 {
+    margin: 0 auto;
+  }
+}
+
+.contactFormBox {
+  width: 100%;
+  margin: 10px auto;
+
+  h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+}
+
+.contactFormInput {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    padding: 10px 0 10px 5px;
+    border: none;
+  }
+
+  input {
+    padding: 10px 0 10px 5px;
+    border: none;
+  }
+}
+
+.contactServiceIcon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+  color: $orange;
+}
+
+.contactSubmitBox {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactSubmit {
+  font-size: 25px;
+  @include colorButton($orange);
+}
+
+@include md {
+  .contactFormBox {
+    width: 80%;
+  }
+
+  .ContactForm {
+    width: 90%;
+  }
+}
+
+@include lg {
+  .contactService {
+    width: 30%;
+  }
+
+  .contactFormBox {
+    width: 50%;
+  }
+}

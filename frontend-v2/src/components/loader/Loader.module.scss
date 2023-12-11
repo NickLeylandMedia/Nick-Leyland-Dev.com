@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+.Loader {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loaderIcon {
+  width: 200px;
+  height: 200px;
+  color: $orange;
+  margin-bottom: 25px;
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

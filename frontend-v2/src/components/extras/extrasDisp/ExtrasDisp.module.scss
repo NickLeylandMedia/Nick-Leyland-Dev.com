@@ -1,0 +1,39 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.ExtrasDisp {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 950px;
+  box-sizing: border-box;
+
+  h1 {
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+  }
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@include md {
+  .ExtrasDisp {
+    width: 90%;
+  }
+}
+
+@include lg {
+  .content {
+    width: 60%;
+  }
+}
+
+@include xl {
+  .content {
+    width: 50%;
+  }
+}

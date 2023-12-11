@@ -1,0 +1,40 @@
+@import "../../../styles/responsive.scss";
+
+.ProjectGrid {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 auto;
+  min-height: 950px;
+
+  h1 {
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+}
+
+.gridContainer {
+  display: grid;
+  width: 95%;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@include md {
+  .ProjectGrid {
+    width: 90%;
+  }
+}
+
+@include lg {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include xl {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

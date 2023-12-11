@@ -1,0 +1,63 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+
+.Bio {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 700px;
+  box-sizing: border-box;
+  padding: 20px;
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $orange;
+    font-size: 24px;
+  }
+}
+
+.bioHeader {
+  display: block;
+  text-align: center;
+}
+
+.bioInnerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  padding: 30px;
+}
+
+.bioImage {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 6px solid $orange;
+  box-shadow: rgba($orange, 0.35) 0px 0px 30px 15px;
+}
+
+@include md {
+  .Bio {
+    width: 90%;
+  }
+}
+
+@include lg {
+  .bioImage {
+    width: 40%;
+  }
+}
+
+@include xl {
+  .bioImage {
+    width: 30%;
+  }
+}

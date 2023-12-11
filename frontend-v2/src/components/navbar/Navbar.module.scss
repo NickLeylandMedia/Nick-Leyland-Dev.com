@@ -1,0 +1,66 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.Navbar {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  align-items: center;
+}
+
+.fullNav {
+  display: none;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 10px;
+
+  a {
+    padding: 8px 20px;
+    font-size: 25px;
+  }
+}
+
+.icon {
+  height: 55px;
+  width: 55px;
+  color: white;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
+
+@include lg {
+  .mobileNav {
+    display: none;
+  }
+
+  .fullNav {
+    display: flex;
+  }
+}
+
+@include xl {
+  .fullNav {
+    a {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .fullNav a:hover {
+    background-color: orange;
+    color: black;
+  }
+
+  .icon:hover {
+    color: $orange;
+  }
+}

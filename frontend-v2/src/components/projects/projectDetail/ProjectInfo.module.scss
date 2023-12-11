@@ -1,0 +1,118 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/modules/links";
+
+.ProjectInfo {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  p {
+    color: white;
+  }
+}
+
+.projectImageBacking {
+  width: 95%;
+  margin: 20px auto;
+  background-color: white;
+  padding: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImage {
+  display: block;
+  width: 90%;
+  object-fit: contain;
+  max-height: 350px;
+
+  border-radius: 10px;
+}
+
+.githubLink {
+  @include roundedLink($orange, white);
+}
+
+.visitLink {
+  @include roundedLink($orange, white);
+}
+
+.toolGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.projectActionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.toolTile {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 10px auto;
+
+  img {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include lg {
+  .projectImageBacking {
+    width: 60%;
+  }
+
+  .infoContainer {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .projectActionBar {
+    width: 60%;
+  }
+
+  .projectImage {
+    padding: 50px;
+  }
+
+  .toolGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@include xl {
+  .projectImageBacking {
+    width: 50%;
+  }
+
+  .projectActionBar {
+    width: 50%;
+  }
+
+  .infoContainer {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
