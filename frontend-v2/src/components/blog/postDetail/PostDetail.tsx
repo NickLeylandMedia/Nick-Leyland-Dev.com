@@ -8,6 +8,7 @@ import styles from "./PostDetail.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 
@@ -77,7 +78,13 @@ const PostDetail: React.FC<Props> = ({
       <div className={styles.contentContainer}>
         <h1 className="primary">{title}</h1>
         <div className={styles.postImageBacking}>
-          <img className={styles.postImage} src={image} alt="" />
+          <Image
+            width={1280}
+            height={720}
+            className={styles.postImage}
+            src={image}
+            alt=""
+          />
         </div>
         <div className={styles.postInfo}>
           <p className="">Published On: {renderedDate}</p>

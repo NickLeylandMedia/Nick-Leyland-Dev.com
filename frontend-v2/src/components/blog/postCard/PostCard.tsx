@@ -8,6 +8,7 @@ import styles from "./PostCard.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 
 /* Module Imports */
@@ -81,7 +82,13 @@ const PostCard: React.FC<Props> = ({
     <div className={`${styles.PostCard} whiteCard`}>
       <h2 className="primary">{title}</h2>
       <p className="">{renderedDate}</p>
-      <img src={image} alt="" className={styles.postImage} />
+      <Image
+        height={720}
+        width={1280}
+        src={image}
+        alt=""
+        className={styles.postImage}
+      />
       <div className={styles.catTagContainer}>{renderedCatTags}</div>
       <p>{summary}</p>
       <Link className={styles.postCardLink} href={`/blog/${slug}`}>

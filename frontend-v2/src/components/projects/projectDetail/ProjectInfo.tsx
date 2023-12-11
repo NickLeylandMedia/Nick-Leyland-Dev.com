@@ -8,6 +8,7 @@ import styles from "./ProjectInfo.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 
@@ -55,7 +56,12 @@ const ProjectInfo: React.FC<Props> = ({
     renderedTools = tools.map((tool) => {
       return (
         <div key={Math.random()} className={styles.toolTile}>
-          <img src={urlFor(tool.image).url()} alt="" />
+          <Image
+            width={1280}
+            height={720}
+            src={urlFor(tool.image).url()}
+            alt=""
+          />
         </div>
       );
     });
@@ -71,7 +77,13 @@ const ProjectInfo: React.FC<Props> = ({
     <div className={`${styles.ProjectInfo} darkGrayOverlay`}>
       <h1 className="primary center">{title}</h1>
       <div className={styles.projectImageBacking}>
-        <img className={styles.projectImage} src={image} alt="" />
+        <Image
+          height={720}
+          width={1280}
+          className={styles.projectImage}
+          src={image}
+          alt=""
+        />
       </div>
       <div className={styles.projectActionBar}>
         <Link href={githubLink ? githubLink : ""} className={styles.githubLink}>

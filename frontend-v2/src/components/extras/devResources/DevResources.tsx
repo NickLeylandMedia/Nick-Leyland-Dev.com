@@ -8,6 +8,7 @@ import styles from "./DevResources.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 
 /* Module Imports */
@@ -33,7 +34,12 @@ const DevResources: React.FC<Props> = ({ items }) => {
     renderedResources = items.map((item) => {
       return (
         <Link href={item.url} key={Math.random()} className={styles.resource}>
-          <img src={urlFor(item.image).url()} alt="" />
+          <Image
+            height={720}
+            width={1280}
+            src={urlFor(item.image).url()}
+            alt=""
+          />
           <h2 className="primary">{item.name}</h2>
           <p className="">{item.description}</p>
         </Link>

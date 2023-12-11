@@ -7,6 +7,7 @@ import React from "react";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 
 /* module Imports */
 import { footerLinks } from "../modules/componentData";

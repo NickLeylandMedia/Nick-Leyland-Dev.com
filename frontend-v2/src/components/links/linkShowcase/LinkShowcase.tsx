@@ -8,6 +8,7 @@ import styles from "./LinkShowcase.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 
 /* Module Imports */
@@ -37,7 +38,10 @@ const LinkShowcase: React.FC<Props> = ({ items }) => {
             <Link key={Math.random()} href={link.url}>
               <div className={styles.showcaseLink}>
                 <div className={`${styles.iconContainer}`}>
-                  <img
+                  <Image
+                    alt=""
+                    height={720}
+                    width={1280}
                     src={urlFor(link.image).url()}
                     className={styles.showcaseIcon}
                   />

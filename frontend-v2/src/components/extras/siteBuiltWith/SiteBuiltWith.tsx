@@ -8,6 +8,7 @@ import styles from "./SiteBuiltWith.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 
 /* Module Imports */
@@ -33,7 +34,9 @@ const SiteBuiltWith: React.FC<Props> = ({ items }) => {
     renderedBuildTools = items.map((item, index) => {
       return (
         <Link href={item.url} key={index} className={styles.buildTool}>
-          <img
+          <Image
+            height={720}
+            width={1280}
             className={styles.buildToolImg}
             src={urlFor(item.image).url()}
             alt=""

@@ -8,6 +8,7 @@ import styles from "./ProjectCard.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 
 /* Module Imports */
@@ -52,7 +53,13 @@ const ProjectCard: React.FC<Props> = ({
     <div className={`${styles.ProjectCard} whiteCard`}>
       <div className={styles.contentBox}>
         <h2 className="primary">{name}</h2>
-        <img className={styles.projectCardImage} src={image} alt="" />
+        <Image
+          className={styles.projectCardImage}
+          src={image}
+          alt=""
+          height={720}
+          width={1280}
+        />
         <div className={styles.linkContainer}></div>
         <p>{description ? description : "No description available."}</p>
         <Link href={`/projects/${slug}`} className={styles.projectCardLink}>

@@ -2,17 +2,26 @@ import { urlFor } from "../../modules/urlFor";
 
 import { CodeBlock, dracula, obsidian } from "react-code-blocks";
 
+import Image from "next/image";
+
 import styles from "./TextComponents.module.scss";
 
 const ptComponents = {
   types: {
     image: ({ value }: any) => {
-      return <img src={urlFor(value).url()} />;
+      return (
+        <Image alt={""} width={1280} height={720} src={urlFor(value).url()} />
+      );
     },
     annotatedImage: ({ value }: any) => {
       return (
         <div className={styles.annotatedImage}>
-          <img src={urlFor(value.image).url()} alt={value.alt} />
+          <Image
+            width={1280}
+            height={720}
+            src={urlFor(value.image).url()}
+            alt={value.alt}
+          />
           <p>{value.text}</p>
         </div>
       );

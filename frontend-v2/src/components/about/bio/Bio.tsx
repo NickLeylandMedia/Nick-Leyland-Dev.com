@@ -8,6 +8,7 @@ import styles from "./Bio.module.scss";
 /* Image Imports */
 
 /* Component Imports */
+import Image from "next/image";
 import Link from "next/link";
 
 /* Module Imports */
@@ -35,7 +36,13 @@ const Bio: React.FC<Props> = () => {
       <div className={styles.bioContent}>
         <h2 className={`primary ${styles.bioHeader}`}>Hi! I&apos;m Nick!</h2>
         <div className={styles.bioInnerContent}>
-          <img src="/me.jpg" alt="" className={styles.bioImage} />
+          <Image
+            src="/me.jpg"
+            alt=""
+            width={1280}
+            height={720}
+            className={styles.bioImage}
+          />
 
           <p className={`center`}>
             I&apos;m a creator that is passionate about the digital arts and
