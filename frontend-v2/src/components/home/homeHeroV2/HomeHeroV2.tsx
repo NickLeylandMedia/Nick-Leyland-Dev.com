@@ -69,7 +69,10 @@ const HomeHeroV2: React.FC<Props> = () => {
           <Link className="whiteRoundedLink" href={"/projects"}>
             PROJECTS
           </Link>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link
+            className="whiteRoundedLink"
+            href={"https://github.com/NickLeylandMedia"}
+          >
             GITHUB
           </Link>
           <Link className="whiteRoundedLink" href={"/blog"}>
@@ -83,7 +86,7 @@ const HomeHeroV2: React.FC<Props> = () => {
           </Link>
         </div>
         <div className={styles.wideLinkBox}>
-          <Link href={""} className="orangeRoundedLink">
+          <Link href={"/contact"} className="orangeRoundedLink">
             WORK WITH ME
           </Link>
         </div>
