@@ -89,7 +89,7 @@ const ProjectInfo: React.FC<Props> = ({
         <Link href={githubLink ? githubLink : ""} className={styles.githubLink}>
           GITHUB
         </Link>
-        <Link href={url} className={styles.visitLink}>
+        <Link href={url ? url : ""} className={styles.visitLink}>
           VIEW LIVE
         </Link>
       </div>
