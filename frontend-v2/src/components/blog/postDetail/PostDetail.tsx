@@ -13,7 +13,7 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 
 /* Module Imports */
-import { ptComponents } from "@/components/links/linkShowcase/blockContent/TextComponents";
+import { ptComponents } from "../../../components/blockContent/TextComponents";
 
 /* Component Interfaces */
 interface Props {
