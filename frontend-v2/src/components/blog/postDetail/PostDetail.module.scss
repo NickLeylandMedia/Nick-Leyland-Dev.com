@@ -48,27 +48,33 @@
 
 .catContainer {
   width: 100%;
-  margin: 10px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 5px;
   justify-content: left;
 
+  h2 {
+    margin-bottom: 0;
+  }
+
   p {
-    color: white;
     max-width: 25%;
   }
 }
 
 .tagContainer {
   width: 100%;
-  margin: 10px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: left;
 
+  h2 {
+    margin-bottom: 0;
+  }
+
   p {
-    color: white;
     max-width: 25%;
   }
 }

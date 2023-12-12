@@ -35,33 +35,36 @@ const HomeHeroV2: React.FC<Props> = () => {
   return (
     <div className={`${styles.HomeHeroV2} hero`}>
       <div className={styles.contentBox}>
-        <h1 className="primary">NICK LEYLAND</h1>
+        <h1 className="primary light">NICK LEYLAND</h1>
         <div className={styles.gridMenu}>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link className="whiteRoundedLink primary" href={"/about"}>
             ABOUT
           </Link>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link className="whiteRoundedLink primary" href={"/projects"}>
             PROJECTS
           </Link>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link
+            className="whiteRoundedLink primary"
+            href={"https://github.com/NickLeylandMedia"}
+          >
             GITHUB
           </Link>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link className="whiteRoundedLink primary" href={"/blog"}>
             BLOG
           </Link>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link className="whiteRoundedLink primary" href={"/links"}>
             LINKS
           </Link>
-          <Link className="whiteRoundedLink" href={""}>
+          <Link className="whiteRoundedLink primary" href={"/extras"}>
             EXTRAS
           </Link>
         </div>
-        <Link href={""} className="orangeRoundedLink">
+        <Link href={""} className="orangeRoundedLink primary">
           WORK WITH ME
         </Link>
       </div>
       <div className={styles.wideContentBox}>
-        <h1 className="primary">NICK LEYLAND</h1>
+        <h1 className="primary light">NICK LEYLAND</h1>
         <div className={styles.linkLine}>
           <Link className="whiteRoundedLink" href={"/about"}>
             ABOUT

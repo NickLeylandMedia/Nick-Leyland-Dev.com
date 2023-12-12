@@ -53,7 +53,7 @@ const SiteBuiltWith: React.FC<Props> = ({ items }) => {
   /* Component Return Statement */
   return (
     <div className={styles.SiteBuiltWith}>
-      <h2 className="primary">Built With:</h2>
+      <h2 className="primary light">Built With:</h2>
       <div className={styles.toolContainer}>{renderedBuildTools}</div>
     </div>
   );

@@ -13,7 +13,7 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 
 /* Module Imports */
-import { ptComponents } from "@/components/blockContent/TextComponents";
+import { ptComponents } from "@/components/links/linkShowcase/blockContent/TextComponents";
 
 /* Component Interfaces */
 interface Props {
@@ -76,7 +76,7 @@ const PostDetail: React.FC<Props> = ({
   return (
     <div className={`${styles.PostDetail} darkGrayOverlay`}>
       <div className={styles.contentContainer}>
-        <h1 className="primary">{title}</h1>
+        <h1 className="primary light">{title}</h1>
         <div className={styles.postImageBacking}>
           <Image
             width={1280}
@@ -87,14 +87,14 @@ const PostDetail: React.FC<Props> = ({
           />
         </div>
         <div className={styles.postInfo}>
-          <p className="">Published On: {renderedDate}</p>
-          <p>{summary}</p>
+          <p className="light">Published On: {renderedDate}</p>
+          <p className="light">{summary}</p>
           <div className={styles.catContainer}>
-            <h2 className="primary">Categories:</h2>
+            <h2 className="primary light">Categories:</h2>
             <div className={styles.flexContainer}>{renderedCategories}</div>
           </div>
           <div className={styles.tagContainer}>
-            <h2 className="primary">Tags:</h2>
+            <h2 className="primary light">Tags:</h2>
             <div className={styles.flexContainer}>{renderedTags}</div>
           </div>
         </div>
@@ -102,7 +102,7 @@ const PostDetail: React.FC<Props> = ({
           <PortableText value={body} components={ptComponents} />
         </div>
         <div className={styles.postEnd}>
-          <h2 className="primary">Thanks for reading!</h2>
+          <h2 className="primary light">Thanks for reading!</h2>
           <div className={styles.postEndActions}>
             <Link href={"/blog"} className={styles.postActionLink}>
               BLOG

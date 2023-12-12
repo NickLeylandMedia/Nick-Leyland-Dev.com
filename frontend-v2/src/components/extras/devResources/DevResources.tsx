@@ -54,8 +54,8 @@ const DevResources: React.FC<Props> = ({ items }) => {
   /* Component Return Statement */
   return (
     <div className={styles.DevResources}>
-      <h2 className="primary">Resources</h2>
-      <p className={styles.resourceTagline}>
+      <h2 className="primary light">Resources</h2>
+      <p className={`${styles.resourceTagline} light`}>
         Some of my favorite development resources.
       </p>
       <div className={styles.resourceContainer}>{renderedResources}</div>
