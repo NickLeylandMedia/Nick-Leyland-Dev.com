@@ -64,7 +64,7 @@ const ProjectGrid: React.FC<Props> = ({
   /* Component Return Statement */
   return (
     <div className={`${styles.ProjectGrid} darkGrayOverlay`}>
-      <h1 className={`primary`}>My Projects</h1>
+      <h1 className={`primary light`}>My Projects</h1>
       <div className={styles.gridContainer}>{renderedProjects}</div>
       <Pagination
         totalPages={totalPages}

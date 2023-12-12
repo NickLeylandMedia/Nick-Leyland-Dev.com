@@ -75,7 +75,7 @@ const ProjectInfo: React.FC<Props> = ({
   /* Component Return Statement */
   return (
     <div className={`${styles.ProjectInfo} darkGrayOverlay`}>
-      <h1 className="primary center">{title}</h1>
+      <h1 className="primary center light">{title}</h1>
       <div className={styles.projectImageBacking}>
         <Image
           height={720}
@@ -94,11 +94,11 @@ const ProjectInfo: React.FC<Props> = ({
         </Link>
       </div>
       <div className={styles.infoContainer}>
-        <h2 className="primary">Summary</h2>
+        <h2 className="primary light">Summary</h2>
         <p>{summary ? summary : "No summary to display."}</p>
-        <h2 className="primary">Tools</h2>
+        <h2 className="primary light">Tools</h2>
         <div className={styles.toolGrid}>{renderedTools}</div>
-        <h2 className="primary">Description</h2>
+        <h2 className="primary light">Description</h2>
         {description ? (
           <PortableText value={description} components={components} />
         ) : (

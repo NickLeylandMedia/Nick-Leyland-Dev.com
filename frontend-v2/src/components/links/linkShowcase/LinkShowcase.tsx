@@ -55,7 +55,9 @@ const LinkShowcase: React.FC<Props> = ({ items }) => {
         });
         return (
           <div key={Math.random()} className={styles.linkCategory}>
-            <h2 className={`${styles.linkCatHeader} primary`}>{item.name}</h2>
+            <h2 className={`${styles.linkCatHeader} primary light`}>
+              {item.name}
+            </h2>
             <div className={styles.linkContainer}>{renderedLinks}</div>
           </div>
         );
@@ -70,7 +72,7 @@ const LinkShowcase: React.FC<Props> = ({ items }) => {
   /* Component Return Statement */
   return (
     <div className={`${styles.LinkShowcase} darkGrayOverlay`}>
-      <h1 className={`primary ${styles.linkShowcaseHeader}`}>Links</h1>
+      <h1 className={`primary ${styles.linkShowcaseHeader} light`}>Links</h1>
       {renderedLinkCategories}
     </div>
   );

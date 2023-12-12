@@ -53,25 +53,25 @@ const Navbar: React.FC<Props> = ({ setter, showMenu }) => {
         )}
       </div>
       <div className={styles.fullNav}>
-        <Link className="textLinkWithBackground" href={"/"}>
+        <Link className="textLinkWithBackground semiBold" href={"/"}>
           HOME
         </Link>
-        <Link className="textLinkWithBackground" href={"/about"}>
+        <Link className="textLinkWithBackground semiBold" href={"/about"}>
           ABOUT
         </Link>
-        <Link className="textLinkWithBackground" href={"/projects"}>
+        <Link className="textLinkWithBackground semiBold" href={"/projects"}>
           PROJECTS
         </Link>
-        <Link className="textLinkWithBackground" href={"/contact"}>
+        <Link className="textLinkWithBackground semiBold" href={"/contact"}>
           CONTACT
         </Link>
-        <Link className="textLinkWithBackground" href={"/blog"}>
+        <Link className="textLinkWithBackground semiBold" href={"/blog"}>
           BLOG
         </Link>
-        <Link className="textLinkWithBackground" href={"/links"}>
+        <Link className="textLinkWithBackground semiBold" href={"/links"}>
           LINKS
         </Link>
-        <Link className="textLinkWithBackground" href={"/extras"}>
+        <Link className="textLinkWithBackground semiBold" href={"/extras"}>
           EXTRAS
         </Link>
       </div>

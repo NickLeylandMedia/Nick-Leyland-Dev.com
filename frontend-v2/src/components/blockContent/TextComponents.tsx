@@ -22,7 +22,7 @@ const ptComponents = {
             src={urlFor(value.image).url()}
             alt={value.alt}
           />
-          <p>{value.text}</p>
+          <p className="light">{value.text}</p>
         </div>
       );
     },

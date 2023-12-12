@@ -62,7 +62,7 @@ const PostGrid: React.FC<Props> = ({
   /* Component Return Statement */
   return (
     <div className={`${styles.PostGrid} darkGrayOverlay`}>
-      <h1 className="primary text-3xl">Blog</h1>
+      <h1 className="primary text-3xl light">Blog</h1>
       <div className={styles.gridContainer}>{renderedPosts}</div>
       {totalPages > 1 ? (
         <Pagination

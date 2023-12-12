@@ -58,16 +58,16 @@ const PostCard: React.FC<Props> = ({
   renderedCatTags = renderArr.map((item: any) => {
     if (item.type === "category") {
       return (
-        <div key={Math.random()} className={styles.catPill}>
-          <p>{item.name}</p>
-        </div>
+        <p key={Math.random()} className={styles.catPill}>
+          {item.name}
+        </p>
       );
     }
     if (item.type === "tag") {
       return (
-        <div key={Math.random()} className={styles.tagPill}>
-          <p>{item.name}</p>
-        </div>
+        <p key={Math.random()} className={styles.tagPill}>
+          {item.name}
+        </p>
       );
     }
   });
